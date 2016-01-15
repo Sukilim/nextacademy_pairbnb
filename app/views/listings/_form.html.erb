@@ -1,0 +1,45 @@
+<h1>New Listing</h1>
+
+<%= form_for @listing do |f| %>
+
+	<div> 
+		<%= f.label :party_name %>
+		<%= f.text_field :party_name %>
+	</div>
+
+	<div>
+		<%= f.label :location %>
+		<%= f.text_field :location %>
+	</div>
+
+  <div>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</div>
+
+	<div>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</div>
+
+	<div>
+		<%= f.label :theme%>
+		<%= f.text_field :theme %>
+	</div>
+
+	<div>
+		<%= f.label :date %>
+		<%= f.date_field :date %>
+	</div> 
+
+	<div>
+		<%= f.label :time %>
+		<%= f.text_field :time %>
+	</div>
+
+<div><%=f.label :upload_profile_photo%><%= f.file_field :picture, multiple: true %></div>
+
+  <span><%= f.submit "Submit"%></span>
+	</div>
+
+<% end %>

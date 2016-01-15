@@ -22,14 +22,11 @@ body {
     linear-gradient(
       rgba(0, 0, 0, 0.3), 
       rgba(0, 0, 0, 0.3)
-    ),
-  asset_url("sample_cover.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  background-size: cover;
+      );
+  background-color: white;
   font-family: 'Open Sans', sans-serif;
 }
+
 
   .hero-header {
     text-align: center;
@@ -76,6 +73,11 @@ body {
  
 /*----- Menu -----*/
 
+.session_font {
+  color: #F8F8FF
+}
+
+
   .menu {
     width:100%;
     background:#ff5a5f;
@@ -109,9 +111,10 @@ body {
   text-decoration:none;
   color:#303030;
 }
+
 .menu {
   width:100%;
-  background:#ff5a5f;
+  background:#5F9EA0;
 }
  
 .menu ul {
@@ -158,4 +161,10 @@ body {
       display: inline;
     }
   }
+}
+
+/*----- Profile -----*/
+
+.profile {
+  color:#ffffff
 }

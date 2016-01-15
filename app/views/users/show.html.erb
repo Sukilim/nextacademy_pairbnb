@@ -1,0 +1,12 @@
+<h1 class="profile">Hello, <%= current_user.username%></h1>
+
+<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+
+<% unless @user.avatar_url.nil? %><%= image_tag @user.avatar_url(:display) %><br /><% end %>
+
+<h2><%unless @listing.nil?%><%= @listings.party_name %><%end%></h2>
+
+<li><% if current_user %>
+<%= link_to "Add Event", new_listing_path %>
+<% end %></li>
+

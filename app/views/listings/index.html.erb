@@ -1,0 +1,32 @@
+<table class="table">
+<thead>
+	<tr>
+		<th>Party Name</th>
+		<th>Location</th>
+		<th>Theme</th>
+		<th>Date</th>
+		<th>Time</th>
+		<th>Description</th>
+		<th>Price</th>
+		<th>User</th>
+		<th>Pictures</th>
+
+	</tr>
+</thead>
+
+<tbody>
+	<% @listings.each do |list| %>
+		<tr>
+			<td><p><%= list.party_name %></p></td>
+ 			<td><p><%= list.location %></p></td>
+ 			<td><p><%= list.theme %></p></td>
+ 			<td><p><%= list.date %></p></td>
+ 			<td><p><%= list.time %></p></td>
+ 			<td><p><%= list.description %></p></td>
+ 			<td><p><%= list.price %></p></td>
+ 			<td><p><%= list.user.to_s %></p></td>
+ 			<td><% list.listing_pictures.each do |listing_photo| %><%= image_tag listing_photo.picture_url(:display) %></td>
+		<% end %>
+		<td><li><%= link_to "See More", listing_path(list.id) %></li><td>
+		<% end %> 
+</tbody>

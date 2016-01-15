@@ -1,0 +1,37 @@
+<table class="table">
+<thead>
+	<tr>
+		<th>Party Name</th>
+		<th>Location</th>
+		<th>Theme</th>
+		<th>Date</th>
+		<th>Time</th>
+		<th>Description</th>
+		<th>Price</th>
+		<th>User</th>
+		<th>Pictures</th>
+
+	</tr>
+</thead>
+
+<tbody>
+			<td><p><%= @listings.party_name %></p></td>
+ 			<td><p><%= @listings.location %></p></td>
+ 			<td><p><%= @listings.theme %></p></td>
+ 			<td><p><%= @listings.date %></p></td>
+ 			<td><p><%= @listings.time %></p></td>
+ 			<td><p><%= @listings.description %></p></td>
+ 			<td><p><%= @listings.price %></p></td>
+ 			<td><p><%= @listings.user.to_s %></p></td>
+ 			<td><% @listing_pictures.each do |listing_photo| %><%= image_tag listing_photo.picture_url(:display) %></td>
+			<% end %>
+
+			<li><% if @listings.user_id == current_user.id %>
+			<%= link_to "Edit Event", edit_listing_path %>
+			<% end %></li>
+
+			<li><% unless @listings.user_id == current_user.id %>
+			<%= link_to "Request Reservation", reservations_path %>
+			<% end %></li>
+
+</tbody>

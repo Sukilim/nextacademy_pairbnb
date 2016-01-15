@@ -6,13 +6,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '3b8cfe9a32c1814b37f220396183fcc93d82baddea08174b7c3a799fb1d31bba29a7fe65df9bb648f1dbfc2f37e6be4b8c793fb292a2ae8da0364bd7ac3f4ce4'
+  # config.secret_key = '546711a791d820478d5a077f1e42607478f10bc4002ad86906405f4656ba28fd369835307abaec09b16e18c46d315ba8468c6f4d1976532dc4e04ee50d808a9a'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'http://localhost:3000/'
+  config.mailer_sender = 'please-change-me-at-config-initializers'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -99,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'e103fc87eeed03295be5891e3a26df4062479affd01fc20db0fa473ca06fe19a08a15be59fbfe2f27807da63c34886e6a64fa3e9b8081e1893fef502a3b881ef'
+  # config.pepper = '18d12bb60ef7070caa30eb8a9e9cd5a1076612f104e9aacde5d8aeb4485724cfc7555b0ce2a5692f8c74888fcd92ba6813f914c164aa10990328e7a1ec16c8f2'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -153,9 +153,6 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-
-  # If true, expires auth token on session timeout.
-  # config.expire_auth_token_on_timeout = false
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -238,7 +235,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"]
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

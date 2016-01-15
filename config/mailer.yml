@@ -1,0 +1,14 @@
+development:
+  mailer_domain: localhost:3000
+  mailer_username: suki.fonxin@gmail.com
+  mailer_password: Munchylim1
+
+production:
+  mailer_domain: localhost:3000
+  mailer_username: suki.fonxin@gmail.com
+  mailer_password: Munchylim1
+
+test:
+  mailer_domain: localhost:3000
+  mailer_username: suki.fonxin@gmail.com
+  mailer_password: Munchylim1
